@@ -1,15 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    /*async headers() {
-        return [
-            {
-                source: '/:path*',
-                headers: [
-                    {key: 'referrer-policy', value: 'no-referrer'}
-                ]
-            }
-        ]
-    }*/
-};
-
-export default nextConfig;
+    async headers() {
+       return [
+          {
+             source: '/:path*',
+             headers: [
+                { key: 'referrer-policy', value: 'no-referrer'}
+             ]
+          }
+       ]
+    }
+ }
+ 
+ //module.exports = nextConfig
+ export default nextConfig;
